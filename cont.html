@@ -3,26 +3,66 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Creează cont</title>
+  <title>Crează cont</title>
   <style>
     body {
-      background-color: #003300;
-      color: #ffffff;
-      font-family: 'Arial', sans-serif;
-      padding: 20px;
       margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #003300;
+      color: white;
     }
-    nav {
+    header {
       background-color: #66bb6a;
-      padding: 10px;
+      padding: 10px 0;
       text-align: center;
     }
-    nav a {
-      color: #003300;
+    header nav a {
+      color: black;
+      text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
-      text-decoration: none;
+      font-size: 18px;
+    }
+    header nav a:hover {
+      text-decoration: underline;
+    }
+    .formular-contact {
+      max-width: 400px;
+      margin: 80px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+    }
+    .formular-contact h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: white;
+      color: black;
+      font-size: 16px;
+    }
+    input[type="submit"] {
+      background-color: #FFC107;
+      color: black;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 50px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #FFB300;
     }
     footer {
       background-color: #003300;
@@ -33,42 +73,29 @@
     }
   </style>
 </head>
+
 <body>
 
-<nav>
+<header>
+  <nav>
     <a href="index.html">Povestea mea</a>
     <a href="produse.html">Cele mai utile produse</a>
     <a href="cont.html">Creează cont</a>
-</nav>
+  </nav>
+</header>
 
-<h1 style="text-align: center;">Dacă îți dorești propriul cont doTERRA</h1>
-<h2 style="text-align: center; margin-top: 40px;">completează formularul de mai jos</h2>
+<div class="formular-contact">
+  <h2>Contactează-mă</h2>
+  <form action="https://formspree.io/f/xrbqbalr" method="POST">
+    <input type="text" name="nume" placeholder="Nume" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="mesaj" placeholder="Mesajul tău..." rows="5" required></textarea>
+    <input type="submit" value="Trimite mesajul">
+  </form>
+</div>
 
-<form action="https://formspree.io/f/xrbqbalr" method="POST" style="background: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 10px; max-width: 500px; margin: 20px auto; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); display: flex; flex-direction: column;">
-  
-  <label for="name" style="margin-bottom: 5px;">Nume:</label>
-  <input type="text" id="name" name="name" required style="padding: 10px; margin-bottom: 15px; border: none; border-radius: 5px; outline: none;">
-
-  <label for="email" style="margin-bottom: 5px;">Email:</label>
-  <input type="email" id="email" name="email" required style="padding: 10px; margin-bottom: 15px; border: none; border-radius: 5px; outline: none;">
-
-  <label for="message" style="margin-bottom: 5px;">Mesaj:</label>
-  <textarea id="message" name="message" rows="5" required style="padding: 10px; margin-bottom: 20px; border: none; border-radius: 5px; outline: none;"></textarea>
-
-  <button type="submit" style="background-color: #b2ff59; color: #003300; font-weight: bold; padding: 12px; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s;">Trimite mesajul</button>
-
-</form>
-
-<style>
-form input:focus, form textarea:focus {
-    background-color: #e0f7e9; /* un verde foarte pal la focus */
-}
-button:hover {
-    background-color: #66bb6a; /* la hover pe buton */
-}
-</style>
 <footer>
-    &copy; 2025 Sănătate din natură by Gabriela. Toate drepturile rezervate.
+  © 2025 Sănătate din natură by Gabriela. Toate drepturile rezervate.
 </footer>
 
 </body>
