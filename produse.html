@@ -51,20 +51,41 @@
     .buton-detalii:hover {
       background-color: #FFB300;
     }
- .card-produs h3 {
-  min-height: 50px; /* sau 60px dacă vrei mai mult spațiu */
+ .container-produse {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card-produs {
+  width: 250px;
+  height: 480px; /* carduri egale */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.imagine-produs {
+  height: 250px; /* spatiu fix pentru imagine */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
-    .container-produse {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      padding: 20px;
-    }
+
+.imagine-produs img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
     .detalii-produs {
       display: none;
       margin-top: 15px;
@@ -87,10 +108,12 @@
 
   <!-- PRODUS 1 -->
   <div class="card-produs">
-    <img src="lavanda.png" alt="Lavanda" style="width: 100%; height: 200px; object-fit: contain; marfin-bottom:20px; background: white;">
-    <h3>Lavanda</h3>
-    <button class="buton-detalii" onclick="toggleDetails(this)">Detalii</button>
-    <div class="detalii-produs">
+  <div class="imagine-produs">
+    <img src="lavanda.png" alt="Lavanda">
+  </div>
+  <h3>Lavanda</h3>
+  <button class="buton-detalii" onclick="toggleDetails(this)">Detalii</button>
+</div>
 
     <h4 style="margin: 0 0 4px 0; font-size: 1em; color: #FFD700;">Proprietăți:</h4>
     <ul style="margin: 0 0 8px 20px; padding: 0;">
@@ -126,10 +149,12 @@
 <div class="container-produse">
   <!-- PRODUS 2 -->
   <div class="card-produs">
-    <img src="menta.png" alt="menta" style="width: 100%; height: 200px; object-fit: contain; margin-bottom:20px; background: white;">
-    <h3>Peppermint</h3>
-    <button class="buton-detalii" onclick="toggleDetails(this)">Detalii</button>
-    <div class="detalii-produs">
+  <div class="imagine-produs">
+    <img src="peppermint.png" alt="Peppermint">
+  </div>
+  <h3>Peppermint</h3>
+  <button class="buton-detalii" onclick="toggleDetails(this)">Detalii</button>
+</div>
     <h4 style="margin: 0 0 4px 0; font-size: 1em; color: #FFD700;">Proprietăți:</h4>
     <ul style="margin: 0 0 8px 20px; padding: 0;">
       <li>Revigorant și răcoritor</li>
