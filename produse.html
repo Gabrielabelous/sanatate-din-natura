@@ -84,6 +84,52 @@
     }
   }
 </script>
+
+  <div style="max-width: 300px; border: 1px solid #ddd; border-radius: 5px; padding: 16px; margin: 16px; font-family: Arial, sans-serif;">
+  <img src="menta.png" alt="Imagine Produs" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;">
+  
+<h3 style="margin: 0 0 8px 0; font-size: 1.1em;">Lavanda</h3>
+  <button onclick="toggleDetails(this)" style="background-color: #0288d1; color: #fff; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer;">
+    Vezi detalii
+  </button>
+  
+  <div style="display: none; margin-top: 16px;">
+    <h4 style="margin: 0 0 4px 0; font-size: 1em; color: #FFD700;">Proprietăți:</h4>
+    <ul style="margin: 0 0 8px 20px; padding: 0;">
+      <li>Revigorant și răcoritor</li>
+      <li>Susține digestia sănătoasă</li>
+      <li>Sprijină funcția respiratorie</li>
+      <li>Energizant natural</li>
+      <li>Propietăți antimicrobiene și analgezice locale</li> 
+    </ul>
+    <h4 style="margin: 12px 0 4px 0; font-size: 1em; color: #FFD700;">Utilizări:</h4>
+    <ul style="margin: 0 0 8px 20px; padding: 0;">
+      <li>Aromatic: Difuzat pentru a stimula concentrarea și energia</li>
+      <li>Topic: Aplicat (diluat) pe tâmple,ceafă sau piept pentru răcorire, pentru dureri de cap sau congestie nazală</li>
+    </ul>
+    <h4 style="margin: 12px 0 4px 0; font-size: 1em; color: #FFD700;">Beneficii suplimentare:</h4>
+    <ul style="margin: 0 0 8px 20px; padding: 0;">
+      <li>Calmează durerile musculare</li>
+      <li>Oferă susținere în caz de greață sau rău de mișcare</li>
+      <li>Ajută la reducerea senzației de supraîncălzire a corpului</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Script JavaScript pentru a alterna afișarea detaliilor -->
+<script>
+  function toggleDetails(button) {
+    // Selectăm div-ul de detalii imediat următor butonului
+    var detailsDiv = button.nextElementSibling;
+    if (detailsDiv.style.display === "none" || detailsDiv.style.display === "") {
+      detailsDiv.style.display = "block";
+      button.textContent = "Ascunde detalii";
+    } else {
+      detailsDiv.style.display = "none";
+      button.textContent = "Vezi detalii";
+    }
+  }
+</script>
 <footer>
     &copy; 2025 Sănătate din natură by Gabriela. Toate drepturile rezervate.
 </footer>
