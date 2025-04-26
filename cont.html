@@ -42,8 +42,31 @@
 </nav>
 
 <h1>Creează propriul cont doTERRA</h1>
-<p>Aici îți explic pas cu pas cum să îți creezi cont personal pentru a beneficia de reduceri și oferte exclusive la produsele naturale preferate!</p>
+<h2 style="text-align: center; margin-top: 40px;">Contactează-mă</h2>
 
+<form action="https://formspree.io/f/your_form_id" method="POST" style="background: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 10px; max-width: 500px; margin: 20px auto; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); display: flex; flex-direction: column;">
+  
+  <label for="name" style="margin-bottom: 5px;">Nume:</label>
+  <input type="text" id="name" name="name" required style="padding: 10px; margin-bottom: 15px; border: none; border-radius: 5px; outline: none;">
+
+  <label for="email" style="margin-bottom: 5px;">Email:</label>
+  <input type="email" id="email" name="email" required style="padding: 10px; margin-bottom: 15px; border: none; border-radius: 5px; outline: none;">
+
+  <label for="message" style="margin-bottom: 5px;">Mesaj:</label>
+  <textarea id="message" name="message" rows="5" required style="padding: 10px; margin-bottom: 20px; border: none; border-radius: 5px; outline: none;"></textarea>
+
+  <button type="submit" style="background-color: #b2ff59; color: #003300; font-weight: bold; padding: 12px; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s;">Trimite mesajul</button>
+
+</form>
+
+<style>
+form input:focus, form textarea:focus {
+    background-color: #e0f7e9; /* un verde foarte pal la focus */
+}
+button:hover {
+    background-color: #66bb6a; /* la hover pe buton */
+}
+</style>
 <footer>
     &copy; 2025 Sănătate din natură by Gabriela. Toate drepturile rezervate.
 </footer>
