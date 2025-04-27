@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -25,7 +24,10 @@
       padding: 0 20px;
     }
     .sigla {
-      height: 80px;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      object-fit: cover;
     }
     nav a {
       color: black;
@@ -37,17 +39,38 @@
     nav a:hover {
       text-decoration: underline;
     }
-    .content {
+
+    .sectiune-prezentare {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      padding: 50px 20px;
+    }
+    .text-prezentare {
+      flex: 1;
+      min-width: 280px;
+    }
+    .text-prezentare h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .text-prezentare p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .poza-prezentare {
+      flex: 1;
+      min-width: 280px;
       text-align: center;
-      padding: 40px 20px;
     }
     .poza-profil {
-      width: 150px;
-      height: 150px;
+      width: 250px;
+      height: 250px;
       border-radius: 50%;
-      margin: 20px 0;
       object-fit: cover;
-      border: 2px solid #b2ff59;
+      border: 3px solid #b2ff59;
     }
     .buton-whatsapp {
       display: inline-flex;
@@ -59,7 +82,7 @@
       font-size: 16px;
       font-weight: bold;
       text-decoration: none;
-      margin-top: 20px;
+      margin-top: 10px;
     }
     .buton-whatsapp img {
       height: 24px;
@@ -74,6 +97,7 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -87,19 +111,22 @@
   </div>
 </header>
 
-<div class="content">
-  <h2>Povestea mea</h2>
-  <img src="povestea.jpg" alt="Gabriela" class="poza-profil">
-  <p>Călătoria mea alături de doTERRA a început într-un moment delicat din viața mea, când căutam soluții naturale pentru sănătatea mea intimă. Mă confruntam cu polipi uterini și îmi doream din suflet să evit o intervenție chirurgicală, mai ales că visul meu cel mai mare era să devin mamă.
+<div class="sectiune-prezentare">
+  <div class="text-prezentare">
+    <h2>Povestea mea</h2>
+    <p>Călătoria mea alături de doTERRA a început într-un moment delicat din viața mea, când căutam soluții naturale pentru sănătatea mea intimă. Mă confruntam cu polipi uterini și îmi doream din suflet să evit o intervenție chirurgicală, mai ales că visul meu cel mai mare era să devin mamă.
 
 Am descoperit uleiurile esențiale doTERRA și, cu speranță și încredere, am început să le folosesc constant, urmând un protocol natural. După doar patru luni de utilizare consecventă, viața mea s-a schimbat complet: am rămas însărcinată și visul meu de a deveni mamă a devenit realitate.
 
-Astăzi, împărtășesc cu bucurie experiența mea și îmi doresc să inspir cât mai mulți oameni să descopere puterea remarcabilă a soluțiilor naturale oferite de doTERRA. Ceea ce a început ca o nevoie personală s-a transformat într-o misiune de suflet. Cu dragoste, Gabriela Belous.</p>
-  
-  <a class="buton-whatsapp" href="https://wa.me/40785010962" target="_blank">
-    <img src="whatsapp.png" alt="WhatsApp">
-    Contactează-mă
-  </a>
+Astăzi, împărtășesc cu bucurie experiența mea și îmi doresc să inspir cât mai mulți oameni să descopere puterea remarcabilă a soluțiilor naturale oferite de doTERRA. Ceea ce a început ca o nevoie personală s-a transformat într-o misiune de suflet.</p>
+    <a class="buton-whatsapp" href="https://wa.me/40785010962" target="_blank">
+      <img src="whatsapp-icon.png" alt="WhatsApp"> Contactează-mă
+    </a>
+  </div>
+
+  <div class="poza-prezentare">
+    <img src="poza-ta.jpeg" alt="Gabriela" class="poza-profil">
+  </div>
 </div>
 
 <footer>
