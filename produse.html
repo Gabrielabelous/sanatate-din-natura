@@ -2,7 +2,7 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8">
-  <title>Produse | Sănătate din natură</title>
+  <title>Produse | Sănătate din Natură</title>
   <style>
     body {
       margin: 0;
@@ -24,8 +24,8 @@
       padding: 0 20px;
     }
     .sigla {
-      height: 80px;
-      width: 80px;
+      height: 70px;
+      width: 70px;
       border-radius: 50%;
       object-fit: cover;
     }
@@ -55,8 +55,9 @@
       border: 2px solid #ffffff80;
       border-radius: 10px;
       padding: 20px;
-      width: 180px;
+      width: 220px;
       text-align: center;
+      position: relative;
     }
     .card-produs img {
       width: 100px;
@@ -75,9 +76,17 @@
       border-radius: 50px;
       cursor: pointer;
       font-weight: bold;
+      margin-top: 10px;
     }
     .card-produs button:hover {
       background-color: #ffb300;
+    }
+    .detalii-produs {
+      display: none;
+      text-align: left;
+      font-size: 14px;
+      margin-top: 15px;
+      color: #f1f1f1;
     }
     footer {
       background-color: #003300;
@@ -85,6 +94,16 @@
       text-align: center;
       padding: 20px;
       margin-top: 40px;
+    }
+
+    @media(max-width: 768px) {
+      .galerie-produse {
+        flex-direction: column;
+        align-items: center;
+      }
+      .card-produs {
+        width: 80%;
+      }
     }
   </style>
 </head>
@@ -109,19 +128,31 @@
   <div class="card-produs">
     <img src="lavanda.png" alt="Lavanda">
     <h3>Lavanda</h3>
-    <button>Detalii</button>
+    <button onclick="toggleDetalii(this)">Detalii</button>
+    <div class="detalii-produs">
+      <p><strong>Proprietăți:</strong> Calmante, relaxante.</p>
+      <p><strong>Utilizări:</strong> Aplicat pe piele sau difuzat pentru somn liniștit.</p>
+    </div>
   </div>
 
   <div class="card-produs">
-    <img src="menta.png" alt="Peppermint">
+    <img src="peppermint.png" alt="Peppermint">
     <h3>Peppermint</h3>
-    <button>Detalii</button>
+    <button onclick="toggleDetalii(this)">Detalii</button>
+    <div class="detalii-produs">
+      <p><strong>Proprietăți:</strong> Răcoritor, energizant.</p>
+      <p><strong>Utilizări:</strong> Difuzat sau aplicat pentru dureri de cap.</p>
+    </div>
   </div>
 
   <div class="card-produs">
     <img src="lemon.png" alt="Lemon">
     <h3>Lemon</h3>
-    <button>Detalii</button>
+    <button onclick="toggleDetalii(this)">Detalii</button>
+    <div class="detalii-produs">
+      <p><strong>Proprietăți:</strong> Purificator, revigorant.</p>
+      <p><strong>Utilizări:</strong> Difuzat pentru o stare de bine și curățenie naturală.</p>
+    </div>
   </div>
 
 </div>
@@ -129,6 +160,19 @@
 <footer>
   © 2025 Sănătate din natură by Gabriela. Toate drepturile rezervate.
 </footer>
+
+<script>
+function toggleDetalii(button) {
+  const detalii = button.nextElementSibling;
+  if (detalii.style.display === "block") {
+    detalii.style.display = "none";
+    button.innerText = "Detalii";
+  } else {
+    detalii.style.display = "block";
+    button.innerText = "Ascunde detalii";
+  }
+}
+</script>
 
 </body>
 </html>
