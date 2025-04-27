@@ -1,7 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="ro">
 <head>
+  <meta charset="UTF-8">
+  <title>Cele mai utile produse</title>
   <style>
     body {
       margin: 0;
@@ -9,53 +10,47 @@
       background-color: #003300;
       color: white;
     }
-     header {
-        background-color: #003300;
-        color: #b2ff59;
-        text-align: center;
-        padding: 20px;
+    header {
+      background-color: #66bb6a;
+      padding: 10px 0;
+      text-align: center;
     }
-    header img {
-        max-width: 120px;
-        height: auto;
-        margin-bottom: 10px;
+    .container-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
-    nav {
-        background-color: #66bb6a;
-        text-align: center;
-        padding: 10px;
+    .sigla {
+      height: 80px;
     }
     nav a {
-        color: #003300;
-        text-decoration: none;
-        font-weight: bold;
-        margin: 0 15px;
-    }
-    header nav a {
       color: black;
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
       font-size: 18px;
     }
-    header nav a:hover {
+    nav a:hover {
       text-decoration: underline;
     }
     .container-produse {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
       justify-content: center;
-      padding: 40px 20px 200px; /* padding mare jos ca să nu acopere footer */
+      gap: 20px;
+      padding: 40px 20px 100px;
     }
-      .card-cu-detalii {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-        width: 220px;
-}
+    .card-cu-detalii {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 220px;
+    }
     .card-produs {
-      width: 100px;
+      width: 100%;
       height: 320px;
       background: rgba(255, 255, 255, 0.1);
       border: 1px solid #ddd;
@@ -63,28 +58,18 @@
       padding: 10px;
       display: flex;
       flex-direction: column;
+      align-items: center;
       justify-content: space-between;
-      align-items: center;
-      text-align: center;
     }
-    .imagine-produs {
-      height: auto;
-      display: flex;
-      align-items: center;
-    }
-    .imagine-produs img {
-      max-height: 100%;
+    .card-produs img {
+      max-height: 100px;
       object-fit: contain;
-    }
-    h3 {
-      font-size: 18px;
-      margin: 10px 0;
     }
     .buton-detalii {
       background-color: #FFC107;
-      color: #000000;
-      padding: 8px 20px;
+      color: black;
       border: none;
+      padding: 8px 20px;
       border-radius: 50px;
       font-weight: bold;
       font-size: 14px;
@@ -98,153 +83,97 @@
     .detalii-produs {
       display: none;
       background-color: rgba(255, 255, 255, 0.1);
-      text-align: left;
       margin-top: 10px;
       padding: 10px;
       border-radius: 8px;
       width: 100%;
       font-size: 14px;
-      color: white;
       text-align: left;
     }
     .detalii-produs h4 {
-      color: #FFD700; /* galben auriu */
-      margin-bottom: 5px;
-      margin-top: 10px;
+      color: #FFD700;
     }
     footer {
       background-color: #003300;
       color: #b2ff59;
       text-align: center;
       padding: 20px;
-      width: 100%;
     }
   </style>
 </head>
 
 <body>
 
-<!-- Meniul sus -->
 <header>
-    <img src="logo.jpeg" alt="Sigla Sănătate din natură" style="height: 200px; margin-top: 10px;" />
-
-<nav>
-    <a href="index.html">Povestea mea</a>
-    <a href="produse.html">Produse</a>
-    <a href="cont.html">Crează propriul cont</a>
-</nav>
+  <div class="container-header">
+    <img src="logo.jpeg" alt="Sigla" class="sigla">
+    <nav>
+      <a href="index.html">Povestea mea</a>
+      <a href="produse.html">Produse</a>
+      <a href="cont.html">Contact</a>
+    </nav>
+  </div>
 </header>
-
-  </main>
 
 <h2 style="text-align: center; margin-top: 30px;">Cele mai utile produse doTERRA</h2>
 
-<!-- Produsele -->
 <div class="container-produse">
 
   <!-- Produs 1 -->
-<div class="card-cu-detalii">  
-  <div class="card-produs">
-    <div class="imagine-produs">
+  <div class="card-cu-detalii">
+    <div class="card-produs">
       <img src="lavanda.png" alt="Lavanda">
+      <h3>Lavanda</h3>
+      <button class="buton-detalii" onclick="toggleDetails(this)">Detalii</button>
     </div>
-    <h3>Lavanda</h3>
-    <button class="buton-detalii" onclick="toggleDetails(this)">Detalii</button>
     <div class="detalii-produs">
       <h4>Proprietăți:</h4>
       <ul>
         <li>Calmant și relaxant</li>
-        <li>Susține somnul odihnitor</li>
-        <li>Ajută la calmarea pielii iritate</li>
-      </ul>
-      <h4>Utilizări:</h4>
-      <ul>
-        <li>Aromatic: Difuzat pentru relaxare și reducerea stresului</li>
-        <li>Topic: Aplicat pe piele (diluat) pentru calmarea iritațiilor sau înțepăturilor</li>
-      </ul>
-      <h4>Beneficii suplimentare:</h4>
-      <ul>
-        <li>Sprijină sănătatea emoțională</li>
-        <li>Susținet regenerarea pielii</li>
-        <li>Susține somnul odihnitor</li>
-        <li>Sprijină sistemul nervos</li>
+        <li>Sprijină somnul odihnitor</li>
       </ul>
     </div>
   </div>
 
   <!-- Produs 2 -->
-<div class="card-cu-detalii">    
-  <div class="card-produs">
-    <div class="imagine-produs">
-      <img src="menta.png" alt="Peppermint">
+  <div class="card-cu-detalii">
+    <div class="card-produs">
+      <img src="peppermint.png" alt="Peppermint">
+      <h3>Peppermint</h3>
+      <button class="buton-detalii" onclick="toggleDetails(this)">Detalii</button>
     </div>
-    <h3>Peppermint</h3>
-    <button class="buton-detalii" onclick="toggleDetails(this)">Detalii</button>
     <div class="detalii-produs">
       <h4>Proprietăți:</h4>
       <ul>
         <li>Revigorant și răcoritor</li>
-        <li>Susține digestia sănătoasă</li>
-        <li>Sprijină funcția respiratorie</li>
-        <li>Energizant natural</li>
-      </ul>
-      <h4>Utilizări:</h4>
-      <ul>
-        <li>Aromatic: Difuzat pentru a stimula concentrarea și energia</li>
-        <li>Topic: Aplicat (diluat) pe tâmple, ceafă sau piept pentru răcorire, pentru dureri de cap sau congestie nazală</li>
-      </ul>
-      <h4>Beneficii suplimentare:</h4>
-      <ul>
-        <li>Calmează durerile musculare și articulare</li>
-        <li>Sprijin în caz de greață sau rău de mișcare</li>
-        <li>Ajută în caz de supraîncălzire</li>
       </ul>
     </div>
   </div>
 
-    <!-- Produs 3 -->
-<div class="card-cu-detalii">    
-  <div class="card-produs">
-    <div class="imagine-produs">
-      <img src="lemon.png" alt="Lemon">
+  <!-- Produs 3 -->
+  <div class="card-cu-detalii">
+    <div class="card-produs">
+      <img src="lamaie.png" alt="Lămâie">
+      <h3>Lămâie</h3>
+      <button class="buton-detalii" onclick="toggleDetails(this)">Detalii</button>
     </div>
-    <h3>Lemon</h3>
-    <button class="buton-detalii" onclick="toggleDetails(this)">Detalii</button>
     <div class="detalii-produs">
       <h4>Proprietăți:</h4>
       <ul>
-        <li>Purifiant și detoxifiant</li>
-        <li>Susține sănătatea sistemului respirator</li>
-        <li>Ajută la stimularea metabolismului</li>
-        <li>Sprijită starea de spirit pozitivă</li>
-      </ul>
-      <h4>Utilizări:</h4>
-      <ul>
-        <li>Aromatic: Difuzat pentru o atmosferă curată, energizantă și revigorantă</li>
-        <li>Topic: Aplicat (diluat) pe piele pentru efecte purifiante, dar trebuie evitată expunerea la soare după</li>
-        <li>Intern: Adăugat în apă pentru detoxifiere sau în mâncare/băuturi pentru aromă</li>
-      </ul>
-      <h4>Beneficii suplimentare:</h4>
-      <ul>
-        <li>Susține funcția ficatului</li>
-        <li>Înbunătățește concentrarea și starea de spirit</li>
-        <li>Revitalizează pielea ternă și grasă</li>
+        <li>Detoxifiant natural</li>
       </ul>
     </div>
   </div>
 
 </div>
 
-  </main>
-<!-- Footer jos -->
 <footer>
   © 2025 Sănătate din natură by Gabriela. Toate drepturile rezervate.
 </footer>
 
-<!-- Script pentru buton -->
 <script>
 function toggleDetails(button) {
-  var detailsDiv = button.nextElementSibling;
+  var detailsDiv = button.parentElement.nextElementSibling;
   if (detailsDiv.style.display === "none" || detailsDiv.style.display === "") {
     detailsDiv.style.display = "block";
     button.textContent = "Ascunde detalii";
