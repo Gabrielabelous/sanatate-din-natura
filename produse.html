@@ -2,12 +2,12 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8">
-  <title>Cele mai utile produse</title>
+  <title>Produse | Sănătate din natură</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #003300;
+      background: linear-gradient(to bottom, #4caf50, #003300);
       color: white;
     }
     header {
@@ -25,6 +25,9 @@
     }
     .sigla {
       height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      object-fit: cover;
     }
     nav a {
       color: black;
@@ -36,71 +39,52 @@
     nav a:hover {
       text-decoration: underline;
     }
-    .container-produse {
+    h1 {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .galerie-produse {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
-      padding: 40px 20px 100px;
-    }
-    .card-cu-detalii {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 220px;
+      gap: 30px;
+      padding: 20px;
     }
     .card-produs {
-      width: 1800%;
-      height: 320px;
-      background: rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.1);
       border: 2px solid #ffffff80;
       border-radius: 10px;
-      padding: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      margin: 10px;
+      padding: 20px;
+      width: 180px;
+      text-align: center;
     }
     .card-produs img {
       width: 100px;
       height: 100px;
-      margin-bottom: 10px;
       object-fit: contain;
+      margin-bottom: 10px;
     }
-    .buton-detalii {
+    .card-produs h3 {
+      margin-bottom: 10px;
+    }
+    .card-produs button {
       background-color: #FFC107;
       color: black;
       border: none;
-      padding: 8px 20px;
+      padding: 10px 20px;
       border-radius: 50px;
-      font-weight: bold;
-      font-size: 14px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
-      margin-top: 5px;
+      font-weight: bold;
     }
-    .buton-detalii:hover {
-      background-color: #FFB300;
-    }
-    .detalii-produs {
-      display: none;
-      background-color: rgba(255, 255, 255, 0.1);
-      margin-top: 10px;
-      padding: 10px;
-      border-radius: 8px;
-      width: 100%;
-      font-size: 14px;
-      text-align: left;
-    }
-    .detalii-produs h4 {
-      color: #FFD700;
+    .card-produs button:hover {
+      background-color: #ffb300;
     }
     footer {
       background-color: #003300;
       color: #b2ff59;
       text-align: center;
       padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -118,54 +102,26 @@
   </div>
 </header>
 
-<h2 style="text-align: center; margin-top: 30px;">Cele mai utile produse doTERRA</h2>
+<h1>Cele mai utile produse doTERRA</h1>
 
-<div class="container-produse">
+<div class="galerie-produse">
 
-  <!-- Produs 1 -->
-  <div class="card-cu-detalii">
-    <div class="card-produs">
-      <img src="lavanda.png" alt="Lavanda">
-      <h3>Lavanda</h3>
-      <button class="buton-detalii" onclick="toggleDetails(this)">Detalii</button>
-    </div>
-    <div class="detalii-produs">
-      <h4>Proprietăți:</h4>
-      <ul>
-        <li>Calmant și relaxant</li>
-        <li>Sprijină somnul odihnitor</li>
-      </ul>
-    </div>
+  <div class="card-produs">
+    <img src="lavanda.png" alt="Lavanda">
+    <h3>Lavanda</h3>
+    <button>Detalii</button>
   </div>
 
-  <!-- Produs 2 -->
-  <div class="card-cu-detalii">
-    <div class="card-produs">
-      <img src="menta.png" alt="Peppermint">
-      <h3>Peppermint</h3>
-      <button class="buton-detalii" onclick="toggleDetails(this)">Detalii</button>
-    </div>
-    <div class="detalii-produs">
-      <h4>Proprietăți:</h4>
-      <ul>
-        <li>Revigorant și răcoritor</li>
-      </ul>
-    </div>
+  <div class="card-produs">
+    <img src="menta.png" alt="Peppermint">
+    <h3>Peppermint</h3>
+    <button>Detalii</button>
   </div>
 
-  <!-- Produs 3 -->
-  <div class="card-cu-detalii">
-    <div class="card-produs">
-      <img src="lemon.png" alt="Lămâie">
-      <h3>Lemon</h3>
-      <button class="buton-detalii" onclick="toggleDetails(this)">Detalii</button>
-    </div>
-    <div class="detalii-produs">
-      <h4>Proprietăți:</h4>
-      <ul>
-        <li>Detoxifiant natural</li>
-      </ul>
-    </div>
+  <div class="card-produs">
+    <img src="lemon.png" alt="Lemon">
+    <h3>Lemon</h3>
+    <button>Detalii</button>
   </div>
 
 </div>
@@ -173,19 +129,6 @@
 <footer>
   © 2025 Sănătate din natură by Gabriela. Toate drepturile rezervate.
 </footer>
-
-<script>
-function toggleDetails(button) {
-  var detailsDiv = button.parentElement.nextElementSibling;
-  if (detailsDiv.style.display === "none" || detailsDiv.style.display === "") {
-    detailsDiv.style.display = "block";
-    button.textContent = "Ascunde detalii";
-  } else {
-    detailsDiv.style.display = "none";
-    button.textContent = "Detalii";
-  }
-}
-</script>
 
 </body>
 </html>
